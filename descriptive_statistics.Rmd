@@ -1,0 +1,80 @@
+---
+title: "Descriptive_Statistics"
+author: 'by: Jenny Brown'
+date: "5/28/2021"
+output: github_document
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Descriptive Statistics
+
+This is an R Markdown document for performing descriptive statistics in R:
+
+## Load Data
+
+The code below reads a csv file and file.choose open a window to choose the csv file. Remove the # from the code below and choose the .csv file of interest. 
+
+```{r}
+# enter.dataset.name<-read.csv(file.choose())
+```
+
+## Descriptive Statistics
+
+Example for cars data set. Changes cars to "enter.dataset.name" chick Edit>Find to replace all the cars with "enter.dataset.name"
+
+```{r cars}
+#Mean
+mean(cars$speed)
+
+#Median
+median(cars$speed)
+
+#Variance
+var(cars$speed)
+
+#Standard Deviation
+sd(cars$speed)
+
+#Interquartile Range
+IQR(cars$speed)
+
+#Min and Max
+min(cars$speed)
+max(cars$speed)
+
+#Range
+max(cars$speed)-min(cars$speed)
+
+#1st Quantile
+quantile(cars$speed,.25)
+
+#3rd Quantile
+quantile(cars$speed,.75)
+
+#Summary
+summary(cars$speed)
+
+```
+
+## Create plots
+
+Create plots and modify the title and axis of a histgram using hist()
+
+```{r}
+#Histogram
+hist(cars$speed)
+
+#Histogram modify title
+hist(cars$speed, main="Speed and Stopping Distance of Cars")
+
+#Histogram modify x-axis
+hist(cars$speed, xlab="Speed(mph)")
+
+#Histogram modify title 
+hist(cars$speed, xlab="Speed(mph)", main="Speed and Stopping Distance of Cars")
+
+```
